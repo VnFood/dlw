@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="zxx" style="overflow-x: hidden">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body style="overflow-x: hidden">
     <!-- Preloader Start -->
     <div id="preloader-active">
       <div class="preloader d-flex align-items-center justify-content-center">
@@ -301,7 +301,7 @@
       </section>
       <!-- Services Card End -->
       <!--? Count Down Start -->
-      <div class="count-down-area">
+      <div class="count-down-area" style="visibility: hidden">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12">
@@ -347,6 +347,19 @@
       <!-- Count Down End -->
       <!--? Gallery Area Start -->
       <div class="gallery-area section-padding4">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-tittle text-center mb-70">
+              <h2>Gallery</h2>
+              <img src="./storage/imgs/tittle_img.png" alt="" />
+              <p>
+                Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
+                volutpat laoreet. Quisque non tellus eleifend arcu gravida
+                aliquam. Vivamus quis consequat nisl
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -357,7 +370,7 @@
                 ></div>
                 <div class="thumb-content-box">
                   <div class="thumb-content">
-                    <h3>image 01</h3>
+                    <h3>Ảnh 01</h3>
                     <a
                       href="assets/img/gallery/gallery1.png"
                       class="menorie-icon"
@@ -376,9 +389,9 @@
                 ></div>
                 <div class="thumb-content-box">
                   <div class="thumb-content">
-                    <h3>image 02</h3>
+                    <h3>Ảnh 02</h3>
                     <a
-                      href="assets/img/gallery/gallery1.png"
+                      href="assets/img/gallery/gallery2.png"
                       class="menorie-icon"
                     >
                       <i class="ti-plus"></i
@@ -395,9 +408,9 @@
                 ></div>
                 <div class="thumb-content-box">
                   <div class="thumb-content">
-                    <h3>image 03</h3>
+                    <h3>Ảnh 03</h3>
                     <a
-                      href="assets/img/gallery/gallery1.png"
+                      href="assets/img/gallery/gallery3.png"
                       class="menorie-icon"
                     >
                       <i class="ti-plus"></i
@@ -414,9 +427,9 @@
                 ></div>
                 <div class="thumb-content-box">
                   <div class="thumb-content">
-                    <h3>image 04</h3>
+                    <h3>Ảnh 04</h3>
                     <a
-                      href="assets/img/gallery/gallery1.png"
+                      href="assets/img/gallery/gallery4.png"
                       class="menorie-icon"
                     >
                       <i class="ti-plus"></i
@@ -432,18 +445,45 @@
       <!--? Gift Start -->
       <section
         class="gift-area gift-padding fix"
-        data-background="assets/img/gallery/section_bg3.png"
+        style="
+          display: flex;
+          justify-content: center;
+          background: linear-gradient(
+              217deg,
+              #f7eeeb,
+              rgba(255, 0, 0, 0) 70.71%
+            ),
+            linear-gradient(127deg, #ffdcd0, rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(336deg, #ffb59c, rgba(0, 0, 255, 0) 70.71%);
+        "
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="gift-caption text-center">
-                <h2>The Best Gift From You</h2>
-                <p>Will be your presentation in our wedding</p>
-                <a href="#" class="btn btn-whit">resarve your Seat</a>
-              </div>
-            </div>
-          </div>
+        <div
+          id="ctn_loitph"
+          class="container ctn_loitph"
+          style="
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row;
+            width: 1200px;
+            overflow-y: hidden;
+            overflow-x: auto;
+            margin: 0;
+            padding: 0;
+            gap: 12px;
+            padding: 12px;
+            scroll-behavior: smooth;
+          "
+        >
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
+          <div class="card_loitph"></div>
         </div>
       </section>
       <!-- Gift End -->
