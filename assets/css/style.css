@@ -2195,7 +2195,7 @@ hr {
   background-size: cover;
 }
 .slider-area {
-  background-image: url(../img/hero/homeHero_1.jpg);
+  background-image: url(../../storage/imgs/slide-1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2204,52 +2204,66 @@ hr {
   overflow: hidden;
 }
 .slider-area .hero__caption span {
-  color: #fff;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 700;
   font-family: "Barlow", sans-serif;
   position: relative;
   display: inline-block;
-  padding-left: 50px;
+  /* padding-left: 50px; */
+  /* padding: ; */
   line-height: 2.1;
   letter-spacing: 0.3em;
   position: relative;
+  color: white;
+  /* background: black; */
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.801);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area .hero__caption span {
     font-size: 18px;
     margin-bottom: 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 @media (max-width: 575px) {
   .slider-area .hero__caption span {
     font-size: 18px;
     margin-bottom: 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
-}
-.slider-area .hero__caption span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  /* background-image: url(../img/hero/hero_shape1.png); */
-  background-image: url(../../storage/imgs/hero_shape1.png);
-  width: 36px;
-  height: 45px;
-  background-repeat: no-repeat;
 }
 .slider-area .hero__caption h1 {
   font-size: 99px;
   font-weight: 700;
   margin-bottom: 14px;
-  color: #fff;
   font-family: "Playfair Display", serif;
   line-height: 1.2;
   text-transform: capitalize;
   margin-bottom: 30px;
   position: relative;
+  color: white;
+  background: black;
+
+  border: 1px solid rgba(255, 255, 255, 0.801);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 }
 .slider-area .hero__caption h1::before {
   content: "";
@@ -2288,6 +2302,13 @@ hr {
   .slider-area .hero__caption h1 {
     font-size: 50px;
     line-height: 1.2;
+    color: white;
+    background: black;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2295,6 +2316,13 @@ hr {
     font-size: 52px;
     line-height: 1.2;
     margin-bottom: 10px;
+    color: white;
+    background: black;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2302,6 +2330,13 @@ hr {
     font-size: 47px;
     line-height: 1.4;
     margin-bottom: 8px;
+    color: white;
+    background: black;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 @media (max-width: 575px) {
@@ -2309,6 +2344,13 @@ hr {
     font-size: 33px;
     line-height: 1.4;
     margin-bottom: 8px;
+    color: white;
+    background: black;
+
+    border: 1px solid rgba(255, 255, 255, 0.801);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
   }
 }
 .slider-area .hero__caption h1 strong {
@@ -2334,10 +2376,12 @@ hr {
   }
 }
 .slider-area .hero__caption p {
-  color: #fff;
+  /* color: #fff; */
   text-transform: uppercase;
   font-size: 23px;
   letter-spacing: 0.2em;
+  color: white;
+  background: black;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-area .hero__caption p {
@@ -5359,8 +5403,8 @@ del {
 
 /* width */
 ::-webkit-scrollbar {
-  /* width: 12px; */
-  height: 8px;
+  width: 12px;
+  /* height: 8px; */
 }
 
 /* Track */
