@@ -3,6 +3,8 @@
   --ast-global-color-2: #e27b3c;
   --ast-global-color-3: #515151;
   --ast-global-color-4: #ffcbad;
+  --ast-global-color-5: #ffe6d7;
+  
 }
 
 @font-face {
@@ -1727,18 +1729,18 @@ hr {
   }
 }
 .story-padding {
-  padding-top: 190px;
+  padding-top: 80px;
   padding-bottom: 150px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .story-padding {
-    padding-top: 190px;
+    padding-top: 80px;
     padding-bottom: 150px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .story-padding {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
   }
 }
@@ -5403,7 +5405,7 @@ del {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0.7rem;
   /* height: 8px; */
 }
 
@@ -5430,3 +5432,20 @@ del {
 p {
   font-family: loiHelvFont;
 }
+
+@keyframes ringloop {
+  from {display: block;}
+  to {display: none;}
+}
+
+#ring {
+  display: block;
+  width: calc(100vw - 200px);
+  height: auto;
+  min-width: 320px;
+  max-width: 520px;
+  animation-name: ringloop;
+  animation-duration: 50ms;
+  animation-iteration-count: infinite;
+}
+

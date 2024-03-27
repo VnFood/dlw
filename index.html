@@ -6,7 +6,7 @@
     <title>Thuỳ Dung & Hữu Lợi | 02-06</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="site.webmanifest" />
+    <!-- <link rel="manifest" href="site.webmanifest" /> -->
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -226,11 +226,71 @@
       <!--? Our Story Start -->
       <div
         id="our-story"
-        style="transition: opacity 0.5s ease-in-out"
+        style="transition: opacity 0.5s ease-in-out; background: black; position: relative;"
         class="Our-story-area story-padding"
       >
-        <div class="container">
-          <!-- Section Tittle -->
+        <div style="position: absolute;">
+          <canvas id="cnv"></canvas>
+        </div>
+        <div
+          class="container"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+          "
+        >
+          <div style="display: flex; flex-flow: column; justify-content: center; z-index: 100;">
+            <div
+              style="
+                position: relative;
+                height: 320px;
+                min-width: 320px;
+              "
+            >
+              <img
+                id="ring"
+                src="./storage/imgs/ring/000.webp"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div
+              class="thanks"
+              style="
+                max-width: 90%;
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-end;
+              "
+            >
+              <div
+                class="tks-title"
+                style="
+                  font-family: 'Playfair Display', serif;
+                  font-size: 55px;
+                  text-align: right;
+                "
+              >
+                Chúng con xin<br> cảm ơn
+              </div>
+              <div
+                class="tks-content"
+                style="text-align: right; font-size: 1em"
+              >
+                <br />
+                <br />
+                <br />
+                Bậc sinh thành, ông bà, cha mẹ<br />
+                cô, dì, chú, bác, cậu, mợ<br />
+                anh, em, bạn bè thân thiết,<br />
+                đã chung vui cùng chúng con!
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="section-tittle text-center mb-70">
@@ -284,7 +344,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- Our Story End -->
       <!--? Services Start -->
