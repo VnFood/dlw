@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("#home, #about").on('click', function(event) {
+  $("#home, #about, #wedding, #gallery, #message, #summary").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -30,21 +30,34 @@ var c = 1;
 var data
 
 function startAnimation() {
-  clearInterval(data);
-  data = setInterval(() => {
-    c++;
-    if (c > 95) {
-      c = 0;
-    }
+  // clearInterval(data);
+  // data = setInterval(() => {
+  //   c++;
+  //   if (c > 95) {
+  //     c = 0;
+  //   }
 
-    if (c < 10) {
-      c = `0${c}`;
-    }
+  //   if (c < 10) {
+  //     c = `0${c}`;
+  //   }
 
 
-    animatedImage.src = `./storage/imgs/ring/0${c}.webp`;
-    // console.log('loi ', c);
-  }, 100, null, true);
+  //   animatedImage.src = `./storage/imgs/ring/0${c}.webp`;
+    
+  // }, 115, null, true);
+
+  c++;
+  if (c > 95) {
+    c = 0;
+  }
+
+  if (c < 10) {
+    c = `0${c}`;
+  }
+
+
+  animatedImage.src = `./storage/imgs/ring/0${c}.webp`;
+  setTimeout(startAnimation, 35);
 }
 
 startAnimation();
@@ -57,13 +70,13 @@ startAnimation();
 //Get context and screen size;
 var ctx = cnv.getContext("2d");
 var W = window.innerWidth;
-var H = window.innerHeight;
+var H = 2400;
 
 //Set Canvas and Background Color;
 cnv.width = W;
-cnv.height = 650;
+cnv.height = 2400;
 ctx.fillStyle = "#000";
-ctx.fillRect(0, 0, W, H);
+ctx.fillRect(0, 0, W, 2400);
 
 //Glow effect;
 ctx.shadowBlur = 10;
@@ -83,7 +96,7 @@ function animate() {
   ctx.fill();
 
   //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
-  setTimeout(animate, 100);
+  setTimeout(animate, 375);
 }
 animate();
 // === Star animation [ END ] ===

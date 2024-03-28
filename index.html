@@ -75,19 +75,12 @@
                 <div class="main-menu f-right d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li><a id="home" href="#home-page"> home</a></li>
-                      <li><a id="about" href="#our-story">About</a></li>
-                      <li><a href="#">gallery</a></li>
-                      <li><a href="#">Guestbook</a></li>
-                      <li>
-                        <a href="#">Blog</a>
-                        <!-- <ul class="submenu">
-                          <li><a href="blog.html">Blog</a></li>
-                          <li><a href="single-blog.html">Blog Details</a></li>
-                          <li><a href="elements.html">Element</a></li>
-                        </ul> -->
-                      </li>
-                      <li><a href="#">Contact Us</a></li>
+                      <li><a id="home" href="#home-page">Trang chủ</a></li>
+                      <li><a id="about" href="#our-story">Lời cảm ơn</a></li>
+                      <li><a id="wedding" href="#wedding-info">Lễ thành hôn</a></li>
+                      <li><a id="gallery" href="#gallery">Thư viện</a></li>
+                      <li><a id="message" href="#message">Thông điệp</a></li>
+                      <li><a id="summary" href="#summary">Summary</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -226,11 +219,20 @@
       <!--? Our Story Start -->
       <div
         id="our-story"
-        style="transition: opacity 0.5s ease-in-out; background: black; position: relative;"
+        style="
+          transition: opacity 0.5s ease-in-out;
+          background: black;
+          position: relative;
+          height: 2400px;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        "
         class="Our-story-area story-padding"
       >
-        <div style="position: absolute;">
-          <canvas id="cnv"></canvas>
+        <div style="position: absolute">
+          <canvas id="cnv" style="width: 100vw; height: 2400px;"></canvas>
         </div>
         <div
           class="container"
@@ -241,11 +243,19 @@
             color: white;
           "
         >
-          <div style="display: flex; flex-flow: column; justify-content: center; z-index: 100;">
+          <div
+            style="
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              z-index: 100;
+            "
+          >
             <div
               style="
                 position: relative;
-                height: 320px;
+                height: 75px;
+                width: 100vw;
                 min-width: 320px;
               "
             >
@@ -259,273 +269,59 @@
             <div
               class="thanks"
               style="
-                max-width: 90%;
                 display: flex;
                 flex-flow: column;
                 justify-content: flex-end;
+                align-items: flex-end;
+                width: 100vw;
+                min-width: 320px
               "
             >
               <div
                 class="tks-title"
                 style="
                   font-family: 'Playfair Display', serif;
-                  font-size: 55px;
-                  text-align: right;
+                  font-size: 36px;
+                  text-align: center;
+                  width: 100%;
+                  min-width: 320px
                 "
               >
-                Chúng con xin<br> cảm ơn
+                Chúng con xin<br />
+                cảm ơn
               </div>
               <div
                 class="tks-content"
-                style="text-align: right; font-size: 1em"
+                style="text-align: center; font-size: 0.8em; font-weight: 300; width: 100vw; min-width: 320px;"
               >
                 <br />
-                <br />
-                <br />
-                Bậc sinh thành, ông bà, cha mẹ<br />
-                cô, dì, chú, bác, cậu, mợ<br />
-                anh, em, bạn bè thân thiết,<br />
-                đã chung vui cùng chúng con!
+                Bậc sinh thành, ông bà, cha mẹ, cô, dì, chú, bác, cậu, mợ<br />
+                anh, em, bạn bè thân thiết, đã chung vui cùng chúng con!
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="section-tittle text-center mb-70">
-                <h2>Chúng con cảm ơn</h2>
-                <img src="./storage/imgs/tittle_img.png" alt="" />
-                <p>
-                  Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
-                  volutpat laoreet. Quisque non tellus eleifend arcu gravida
-                  aliquam. Vivamus quis consequat nisl, nec luctus libero. Nam
-                  sodales sem egestas sem blandit volutpat.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-5">
-              <div
-                class="story-caption background-img mb-40"
-                style="
-                  background-image: url(./storage/imgs/story2.png);
-                  transform: rotate(-5deg);
-                  transition: all 2s;
-                  animation-delay: 2s;
-                "
-              >
-                <div class="story-details">
-                  <h4>The Proposal</h4>
-                  <p>
-                    Proin at sapien ipsum. Aenean placerat, quam ac tempor
-                    congue, orci est luctus ex, ut vestibulum ipsum nisl eu
-                    nisi.
-                  </p>
-                  <p>Proin at sapien ipsum. Aenean placerat, quam ac tempor.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5">
-              <div
-                class="story-img"
-                style="
-                  transform: rotate(5deg);
-                  transition: all 2s;
-                  animation-delay: 2s;
-                "
-              >
-                <img
-                  class="story2"
-                  src="assets/img/gallery/story1.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div> -->
+        <div
+          id="wedding-info"
+          class="container"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 100;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="min-width: 300px; height: 300px; border: 1px solid; background-color: white; color: black;">Block 1</div>
+          <div style="min-width: 300px; height: 300px; border: 1px solid; background-color: white; color: black;">Block 2</div>
+          <div style="min-width: 300px; height: 300px; border: 1px solid; background-color: white; color: black;">Block 3</div>
+        </div>
       </div>
-      <!-- Our Story End -->
-      <!--? Services Start -->
-      <section
-        class="pricing-card-area section-padding30 section-bg"
-        data-background="assets/img/gallery/section_bg1.png"
-      >
-        <div class="container">
-          <!-- Section Tittle -->
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <div class="section-tittle text-center mb-70">
-                <h2>Wedding Info</h2>
-                <img src="./storage/imgs/tittle_img.png" alt="" />
-                <p>...</p>
-                <p>Tổ chức tại ... Với sự hiện diện của 2 nhà.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row align-items-end">
-            <!-- <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="single-card text-center mb-30">
-                <div class="card-top">
-                  <span class="flaticon-chart"></span>
-                  <h4>The Ceremony</h4>
-                </div>
-                <div class="card-bottom">
-                  <ul>
-                    <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
-                    <li><i class="far fa-clock"></i>5:30 PM</li>
-                    <li>
-                      <i class="fas fa-map-marker-alt"></i>The Mayflower Hotel
-                    </li>
-                    <li>1127 Connecticut Avenue,NY</li>
-                    <li><i class="far fa-map"></i> Check out the map</li>
-                  </ul>
-                </div>
-                <div class="card-buttons mt-30">
-                  <a href="#" class="btn card-btn1">Get Started</a>
-                </div>
-              </div>
-            </div> -->
-            <div class="col-xl-6 col-lg-6 col-md-6">
-              <div
-                class="single-card active text-center mb-30"
-                style="
-                  backdrop-filter: blur(7px);
-                  background-color: rgb(233 116 75 / 8%);
-                  border-radius: 40px;
-                "
-              >
-                <div class="card-top">
-                  <!-- <span class="flaticon-project"></span> -->
-                  <img
-                    src="./storage/imgs/flower.png"
-                    alt=""
-                    srcset=""
-                    style="width: 70px; height: auto"
-                  />
-                  <h4>The Reception</h4>
-                </div>
-                <div class="card-bottom">
-                  <ul>
-                    <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
-                    <li><i class="far fa-clock"></i>5:30 PM</li>
-                    <li>
-                      <i class="fas fa-map-marker-alt"></i>The Mayflower Hotel
-                    </li>
-                    <li>1127 Connecticut Avenue,NY</li>
-                    <li><i class="far fa-map"></i> Check out the map</li>
-                  </ul>
-                </div>
-                <div class="card-buttons mt-30">
-                  <a href="#" class="btn card-btn1">Get Started</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-              <div
-                class="single-card active text-center mb-30"
-                style="
-                  backdrop-filter: blur(7px);
-                  background-color: rgb(233 116 75 / 8%);
-                  border-radius: 40px;
-                "
-              >
-                <div class="card-top">
-                  <!-- <span class="flaticon-project"></span> -->
-                  <img
-                    src="./storage/imgs/flower2.png"
-                    alt=""
-                    srcset=""
-                    style="width: 70px; height: auto"
-                  />
-                  <h4>The Reception</h4>
-                </div>
-                <div class="card-bottom">
-                  <ul>
-                    <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
-                    <li><i class="far fa-clock"></i>5:30 PM</li>
-                    <li>
-                      <i class="fas fa-map-marker-alt"></i>The Mayflower Hotel
-                    </li>
-                    <li>1127 Connecticut Avenue,NY</li>
-                    <li><i class="far fa-map"></i> Check out the map</li>
-                  </ul>
-                </div>
-                <div class="card-buttons mt-30">
-                  <a href="#" class="btn card-btn1">Get Started</a>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="single-card text-center mb-30">
-                <div class="card-top">
-                  <span class="flaticon-award"></span>
-                  <h4>The Party</h4>
-                </div>
-                <div class="card-bottom">
-                  <ul>
-                    <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
-                    <li><i class="far fa-clock"></i>5:30 PM</li>
-                    <li>
-                      <i class="fas fa-map-marker-alt"></i>The Mayflower Hotel
-                    </li>
-                    <li>1127 Connecticut Avenue,NY</li>
-                    <li><i class="far fa-map"></i> Check out the map</li>
-                  </ul>
-                </div>
-                <div class="card-buttons mt-30">
-                  <a href="#" class="btn card-btn1">Get Started</a>
-                </div>
-              </div>
-            </div> -->
-          </div>
-        </div>
-      </section>
-      <!-- Services Card End -->
-      <!--? Count Down Start -->
-      <!-- <div class="count-down-area" style="visibility: hidden">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12">
-              <div
-                class="count-down-wrapper"
-                data-background="assets/img/gallery/section_bg2.png"
-              >
-                <div class="row justify-content-between">
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter text-center">
-                      <span class="counter">23</span>
-                      <p>days</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-counter active text-center">
-                      <span class="counter">15</span>
-                      <p>hours</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-counter text-center">
-                      <span class="counter">46</span>
-                      <p>mins</p>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter text-center">
-                      <span class="counter">20</span>
-                      <p>secs</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <!-- Count Down End -->
       <!--? Gallery Area Start -->
       <div
+        id="gallery"
         class="gallery-area section-padding4"
         style="padding-bottom: 0; padding-top: 170px"
       >
@@ -542,86 +338,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-gallery mb-30">
-                <div
-                  class="gallery-img"
-                  style="background-image: url(assets/img/gallery/gallery1.png)"
-                ></div>
-                <div class="thumb-content-box">
-                  <div class="thumb-content">
-                    <h3>Ảnh 01</h3>
-                    <a
-                      href="assets/img/gallery/gallery1.png"
-                      class="menorie-icon"
-                    >
-                      <i class="ti-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-6">
-              <div class="single-gallery mb-30">
-                <div
-                  class="gallery-img"
-                  style="background-image: url(assets/img/gallery/gallery2.png)"
-                ></div>
-                <div class="thumb-content-box">
-                  <div class="thumb-content">
-                    <h3>Ảnh 02</h3>
-                    <a
-                      href="assets/img/gallery/gallery2.png"
-                      class="menorie-icon"
-                    >
-                      <i class="ti-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-6">
-              <div class="single-gallery mb-30">
-                <div
-                  class="gallery-img"
-                  style="background-image: url(assets/img/gallery/gallery3.png)"
-                ></div>
-                <div class="thumb-content-box">
-                  <div class="thumb-content">
-                    <h3>Ảnh 03</h3>
-                    <a
-                      href="assets/img/gallery/gallery3.png"
-                      class="menorie-icon"
-                    >
-                      <i class="ti-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-gallery mb-30">
-                <div
-                  class="gallery-img"
-                  style="background-image: url(assets/img/gallery/gallery4.png)"
-                ></div>
-                <div class="thumb-content-box">
-                  <div class="thumb-content">
-                    <h3>Ảnh 04</h3>
-                    <a
-                      href="assets/img/gallery/gallery4.png"
-                      class="menorie-icon"
-                    >
-                      <i class="ti-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
       <!-- Gallery Area End -->
       <!--? Gift Start -->
@@ -677,7 +393,7 @@
       </section>
       <!-- Gift End -->
       <!--? Contact form Start -->
-      <div class="contact-form section-padding30 fix">
+      <div id="message" class="contact-form section-padding30 fix">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-6">
