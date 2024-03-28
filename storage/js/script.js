@@ -60,7 +60,9 @@ function startAnimation() {
   setTimeout(startAnimation, 35);
 }
 
-startAnimation();
+setTimeout(() => {
+  startAnimation();
+}, 1000)
 
 
 // === Ring animation [ END ] ===
