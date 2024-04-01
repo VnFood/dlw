@@ -57,7 +57,7 @@ function startAnimation() {
 
 
   animatedImage.src = `./storage/imgs/ring/0${c}.webp`;
-  setTimeout(startAnimation, 35);
+  setTimeout(startAnimation, 36);
 }
 
 setTimeout(() => {
@@ -102,3 +102,11 @@ function animate() {
 }
 animate();
 // === Star animation [ END ] ===
+
+
+// close menu after click option
+$('ul.slicknav_nav').click(function() {
+  $('.slicknav_nav').css("display", "none");
+  $('.slicknav_nav').addClass("slicknav_hidden");
+  $('.slicknav_btn').addClass("slicknav_collapsed");
+});
