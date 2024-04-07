@@ -30,22 +30,6 @@ var c = 1;
 var data
 
 function startAnimation() {
-  // clearInterval(data);
-  // data = setInterval(() => {
-  //   c++;
-  //   if (c > 95) {
-  //     c = 0;
-  //   }
-
-  //   if (c < 10) {
-  //     c = `0${c}`;
-  //   }
-
-
-  //   animatedImage.src = `./storage/imgs/ring/0${c}.webp`;
-    
-  // }, 115, null, true);
-
   c++;
   if (c > 95) {
     c = 0;
@@ -72,13 +56,13 @@ setTimeout(() => {
 //Get context and screen size;
 var ctx = cnv.getContext("2d");
 var W = window.innerWidth;
-var H = 2400;
+var H = 2000;
 
 //Set Canvas and Background Color;
 cnv.width = W;
-cnv.height = 2400;
+cnv.height = 2000;
 ctx.fillStyle = "#000";
-ctx.fillRect(0, 0, W, 2400);
+ctx.fillRect(0, 0, W, 2000);
 
 //Glow effect;
 ctx.shadowBlur = 10;

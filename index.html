@@ -196,122 +196,18 @@
       <!-- Header End -->
     </header>
     <main>
-      <!--? Slider Area Start-->
-      <div class="slider-area">
-        <div class="slider-active" style="visibility: hidden">
-          <!-- Single Slider -->
-          <div
-            class="single-slider slider-height hero-overly d-flex align-items-center"
-          >
-            <div class="container" style="visibility: hidden">
-              <div class="row d-flex align-items-center">
-                <div class="col-xl-8 col-lg-6 col-md-8">
-                  <div class="hero__caption" style="width: 600px">
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        width: fit-content;
-                        padding: 20px;
-                      "
-                    >
-                      <span data-animation="fadeInLeft" data-delay=".3s"
-                        >2 tháng 6</span
-                      >
-                    </div>
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        padding: 20px;
-                      "
-                    >
-                      <h1
-                        data-animation="fadeInLeft"
-                        data-delay=".5s"
-                        data-duration="2000ms"
-                      >
-                        Thuỳ Dung<strong style="color: #ffcbad"> & </strong> Hữu
-                        Lợi
-                      </h1>
-                    </div>
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        width: fit-content;
-                        padding: 20px;
-                      "
-                    >
-                      <p
-                        data-animation="fadeInLeft"
-                        data-delay=".9s"
-                        style="color: #e1b59a"
-                      >
-                        về chung một nhà ạ!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div
+        class="slide"
+      >
+        <div class="tit-container">
+          <div class="label">June 2nd</div>
+          <div class="tit-line1">
+            <div class="content">Thuỳ Dung</div>
+            <div class="empty"></div>
           </div>
-          <!-- Single Slider -->
-          <div
-            class="single-slider slider-height hero-overly d-flex align-items-center"
-          >
-            <div class="container" style="visibility: hidden">
-              <div class="row d-flex align-items-center">
-                <div class="col-xl-8 col-lg-6 col-md-8">
-                  <div class="hero__caption" style="width: 600px">
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        width: fit-content;
-                        padding: 20px;
-                      "
-                    >
-                      <span data-animation="fadeInLeft" data-delay=".3s"
-                        >2 tháng 6</span
-                      >
-                    </div>
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        padding: 20px;
-                      "
-                    >
-                      <h1
-                        data-animation="fadeInLeft"
-                        data-delay=".5s"
-                        data-duration="2000ms"
-                      >
-                        Thuỳ Dung<strong style="color: #ffcbad"> & </strong> Hữu
-                        Lợi
-                      </h1>
-                    </div>
-                    <div
-                      style="
-                        background: black;
-                        background: black;
-                        width: fit-content;
-                        padding: 20px;
-                      "
-                    >
-                      <p
-                        data-animation="fadeInLeft"
-                        data-delay=".9s"
-                        style="color: #e1b59a"
-                      >
-                        về chung một nhà ạ!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="tit-line2">
+            <div class="empty"></div>
+            <div class="content">Hữu Lợi</div>
           </div>
         </div>
       </div>
@@ -323,7 +219,7 @@
           transition: opacity 0.5s ease-in-out;
           background: black;
           position: relative;
-          height: 2400px;
+          height: 2000px;
           padding: 0;
           display: flex;
           flex-direction: column;
@@ -332,7 +228,7 @@
         class="Our-story-area story-padding"
       >
         <div style="position: absolute">
-          <canvas id="cnv" style="width: 100vw; height: 2400px"></canvas>
+          <canvas id="cnv" style="width: 100vw; height: 2000px"></canvas>
         </div>
         <div
           class="container"
@@ -349,14 +245,53 @@
               flex-flow: column;
               justify-content: center;
               z-index: 100;
+              padding-top: 5rem;
+            "
+          >
+          <div
+            class="thanks"
+            style="
+              display: flex;
+              flex-flow: column;
+              justify-content: flex-end;
+              align-items: flex-end;
+              width: 100vw;
+              min-width: 320px;
             "
           >
             <div
+              class="tks-title"
               style="
-                position: relative;
-                height: 75px;
+                font-family: 'loiHelvFont';
+                font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
+                text-align: center;
+                width: 100%;
+                min-width: 320px;
+              "
+            >
+              Xin cảm ơn
+            </div>
+            <div
+              class="tks-content"
+              style="
+                text-align: center;
+                font-size: clamp(0.5rem, -0.875rem + 8.333333vw, 1.5rem);
+                font-weight: 300;
                 width: 100vw;
                 min-width: 320px;
+              "
+            >
+              <br />
+              Quý khách đã chung vui cùng gia đình ạ!
+            </div>
+          </div>
+            <div
+              style="
+                position: relative;
+                height: 5px;
+                width: 75%;
+                min-width: 320px;
+                margin: auto;
               "
             >
               <img
@@ -367,98 +302,29 @@
                 style="animation: fadeIn 9s"
               />
             </div>
-            <div
-              class="thanks"
-              style="
-                display: flex;
-                flex-flow: column;
-                justify-content: flex-end;
-                align-items: flex-end;
-                width: 100vw;
-                min-width: 320px;
-              "
-            >
-              <div
-                class="tks-title"
-                style="
-                  font-family: 'Playfair Display', serif;
-                  font-size: 8vw;
-                  text-align: center;
-                  width: 100%;
-                  min-width: 320px;
-                "
-              >
-                Chúng con xin<br />
-                cảm ơn
-              </div>
-              <div
-                class="tks-content"
-                style="
-                  text-align: center;
-                  font-size: 0.8em;
-                  font-weight: 300;
-                  width: 100vw;
-                  min-width: 320px;
-                "
-              >
-                <br />
-                Bậc sinh thành, ông bà, cha mẹ, cô, dì, chú, bác, cậu, mợ<br />
-                anh, em, bạn bè thân thiết, đã chung vui cùng chúng con!
-              </div>
-            </div>
+            
           </div>
         </div>
         <div
           id="wedding-info"
-          class="container"
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            z-index: 100;
-            flex-wrap: wrap;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            max-width: 100%;
-          "
         >
-          <div 
-            class="loi-block"
-          >
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                position: relative;
-              "
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2196338891026!2d106.65598457583849!3d10.794483358858724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752934792c4181%3A0xe66860a2929b160c!2sThe%20Adora%20Legend!5e0!3m2!1sen!2s!4v1711989331137!5m2!1sen!2s"
-                
-                style="
-                  border: 0;
-                  height: 100%;
-                  width: 100%;
-                  left: 0;
-                  top: 0;
-                  position: absolute;
-                "
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <div>
-              Block 1
-            </div>
-          </div>
-          <div
-            class="loi-block"
-          >
-            <div>content Block 2</div>
-            <div>Block 2</div>
+          <div class="info-card">
+            <p class="tit">Trân trọng kính mời</p>
+            <p class="dash"></p>
+            <p class="sep">Quý Khách dự tiệc chung vui cùng gia đình chúng tôi tại</p>
+            
+            <p>Nhà hàng tiệc cưới</p>
+            <p class="adora">Adora Legend</p>
+
+            <p>32 Hoàng Việt, Phường 4, Tân Bình, TP.HCM</p>
+            <p class="">12 giờ 30 Chủ Nhật</p>
+            <p>Ngày 2 tháng 6 năm 2024</p>
+            
+            <p>Sự hiện diện của Quý Khách</p>
+            <p>là niềm vinh hạnh cho gia đình chúng tôi</p>
+
+            <p>Trân trọng kính mời!</p>
+            <p>Đón khách: 11h00 - Khai tiệc: 12h30</p>
           </div>
         </div>
       </div>
