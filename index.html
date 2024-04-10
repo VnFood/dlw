@@ -178,7 +178,7 @@
                       <li>
                         <a id="wedding" href="#wedding-info">Lễ thành hôn</a>
                       </li>
-                      <li><a id="gallery" href="#gallery">Thư viện</a></li>
+                      <li><a id="gallery" href="#gallery-info">Thư viện</a></li>
                       <li><a id="message" href="#message">Thông điệp</a></li>
                       <li><a id="summary" href="#summary">Summary</a></li>
                     </ul>
@@ -275,7 +275,7 @@
               class="tks-content"
               style="
                 text-align: center;
-                font-size: clamp(0.5rem, -0.875rem + 8.333333vw, 1.5rem);
+                font-size: clamp(0.95rem, -0.875rem + 8.333333vw, 0.95rem);
                 font-weight: 300;
                 width: 100vw;
                 min-width: 320px;
@@ -309,49 +309,51 @@
           id="wedding-info"
         >
           <div class="info-card">
-            <p class="tit">Trân trọng kính mời</p>
-            <p class="dash"></p>
-            <p class="sep">Quý Khách dự tiệc chung vui cùng gia đình chúng tôi tại</p>
-            
-            <p>Nhà hàng tiệc cưới</p>
-            <p class="adora">Adora Legend</p>
+            <div class="gradient-content">
+              <p class="tit">Trân trọng kính mời</p>
+              <p class="dash"></p>
+              <p class="sep">Quý Khách dự tiệc chung vui </br>cùng gia đình chúng tôi tại</p>
+              
+              </br>
+              <p>Nhà hàng tiệc cưới</p>
+              <p class="adora">Adora Legend</p>
+              <p>32 Hoàng Việt, Phường 4, Tân Bình, TP.HCM</p>
+              </br>
+              
+              <p class="date-time">12 giờ 30 Chủ Nhật</p>
+              <p class="date-time">Ngày 2 tháng 6 năm 2024</p>
+              </br>
+              
+              <p>Sự hiện diện của Quý Khách</p>
+              <p>là niềm vinh hạnh cho gia đình chúng tôi</p>
 
-            <p>32 Hoàng Việt, Phường 4, Tân Bình, TP.HCM</p>
-            <p class="">12 giờ 30 Chủ Nhật</p>
-            <p>Ngày 2 tháng 6 năm 2024</p>
-            
-            <p>Sự hiện diện của Quý Khách</p>
-            <p>là niềm vinh hạnh cho gia đình chúng tôi</p>
-
-            <p>Trân trọng kính mời!</p>
-            <p>Đón khách: 11h00 - Khai tiệc: 12h30</p>
+              </br>
+              <p>Trân trọng kính mời!</p>
+              <p>Đón khách: <b style="color: white;">11h00 - Khai tiệc: 12h30</b></p>
+            </div>
+          
+            <div class="gradient-bg">
+              <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
       <!-- Count Down End -->
       <!--? Gallery Area Start -->
-      <div
-        id="gallery"
-        class="gallery-area section-padding4"
-        style="padding-bottom: 0; padding-top: 170px"
+      <!-- <div
+        id="gallery-info"
       >
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <div class="section-tittle text-center mb-70">
-              <h2>Gallery</h2>
-              <img src="./storage/imgs/tittle_img.png" alt="" />
-              <p>
-                Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
-                volutpat laoreet. Quisque non tellus eleifend arcu gravida
-                aliquam. Vivamus quis consequat nisl
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Gallery Area End -->
-      <!--? Gift Start -->
+        Thư viện ảnh
+      </div> -->
       <section
+        id="gallery-info"
         class="gift-area gift-padding fix"
         style="
           background: linear-gradient(
@@ -366,9 +368,15 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-direction: column;
         "
       >
-        <div>
+        <div
+          id="gallery-info"
+        >
+          Thư viện ảnh
+        </div>
+        <div style="width: 100%;">
           <div
             id="ctn_loitph"
             class="container ctn_loitph"
@@ -376,28 +384,21 @@
               display: flex;
               width: 100%;
               justify-content: space-around;
-              gap: 12px;
-              overflow-y: auto;
-              overflow-x: hidden;
-              height: 650px;
+              overflow-y: hidden;
+              overflow-x: auto;
               scroll-behavior: smooth;
+              padding: 2rem 0;
             "
           >
-            <div class="column1">
-              <div class="card_loitph"></div>
-              <div class="card_loitph2"></div>
-              <div class="card_loitph1"></div>
-            </div>
-            <div class="column2">
-              <div class="card_loitph1"></div>
-              <div class="card_loitph"></div>
-              <div class="card_loitph2"></div>
-            </div>
-            <div class="column3">
-              <div class="card_loitph2"></div>
-              <div class="card_loitph1"></div>
-              <div class="card_loitph"></div>
-            </div>
+            <div class="card-loitph cloitph"></div>
+            <div class="card-loitph cloitph1"></div>
+            <div class="card-loitph cloitph2"></div>
+            <div class="card-loitph cloitph3"></div>
+            <div class="card-loitph cloitph4"></div>
+            <div class="card-loitph cloitph5"></div>
+            <div class="card-loitph cloitph6"></div>
+            <div class="card-loitph cloitph7"></div>
+            <div class="card-loitph cloitph8"></div>
           </div>
         </div>
       </section>
