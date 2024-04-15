@@ -94,3 +94,19 @@ $('ul.slicknav_nav').click(function() {
   $('.slicknav_nav').addClass("slicknav_hidden");
   $('.slicknav_btn').addClass("slicknav_collapsed");
 });
+
+function toRight() {
+
+  let c = document.getElementById('ctn_loitph').scrollLeft;
+
+  let dur = 650;
+  if (c === 0) {
+    dur = 649;
+  }
+
+  $('#ctn_loitph').animate({
+    scrollLeft: c + dur,
+    scrollBehavior: 'smooth',
+  }, 800);
+
+}

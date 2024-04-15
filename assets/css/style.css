@@ -5862,3 +5862,22 @@ p {
   background: #525252;
   border-radius: 60em;
 }
+
+.card-loitph .block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-loitph .block i {
+  display: flex;
+  height: 50px;
+  border-radius: 60rem;
+  background: #525252;
+  color: white;
+  width: 131px;
+  justify-content: center;
+}
+
+.card-loitph .block i:hover {
+  cursor: pointer;
+}
