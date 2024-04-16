@@ -5093,7 +5093,7 @@ p {
 }
 
 .slide {
-  background-image: url(../../storage/imgs/slide-1.jpg);
+  background-image: url(../../storage/imgs/slide-1.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -5133,7 +5133,7 @@ p {
   font-size: 3rem;
   font-weight: 600;
   opacity: 0.8;
-  text-shadow: 2px 2px 12px color(srgb 0.42 0.37 0.27);
+  text-shadow: 2px 2px 12px color(srgb 0.08 0.08 0.07 / 0.23);
 }
 
 .tit-line1 {
