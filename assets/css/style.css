@@ -35,6 +35,11 @@
   src: url(../../storage/font/Wulkan-Display-Bold.otf);
 }
 
+@font-face {
+  font-family: loiMonCheri;
+  src: url(../../storage/font/mon-cheri.ttf);
+}
+
 @import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Playfair+Display:400,500,600,700,800,900|Roboto:300,400,500,700&display=swap");
 .white-bg {
   background: #ffffff;
@@ -147,6 +152,7 @@ body {
   font-style: normal;
   scroll-behavior: smooth;
   background: #CDCDC3;
+  position: relative;
 }
 h1,
 h2,
@@ -5095,22 +5101,27 @@ p {
 .slide {
   background-image: url(../../storage/imgs/slide-1.webp);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom center;
   background-size: cover;
 
-  font-family: slideTitle;
+  font-family: loiMonCheri;
   color: white;
 
   width: 100vw;
-  height: 860px;
+  height: 100vh;
+}
+
+.tit-top {
+  height: 20%;
 }
 
 .tit-container {
-  width: 750px;
-  height: 100%;
+  width: 100vw;
+  height: 80%;
   margin: auto;
   text-align: center;
-  font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 6.5rem);
+  font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 1.5rem);
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -5118,35 +5129,46 @@ p {
 }
 
 .tit-container::after {
+  z-index: 1;
   content: "";
   display: block;
-  position: absolute;
   width: 100%;
-  height: 20vh;
+  height: 184px;
+  position: absolute;
   left: 0;
-  background: linear-gradient(180deg, rgb(196 194 187 / 7%) 0, #000000fa);
-  z-index: 1;
+  background-image: url(../../storage/imgs/cover.png);
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-position-y: top;
+  transform: scaleY(-1);
 }
 
-.tit-container .label {
+.june2nd {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1.75rem, -0.875rem + 8.333333vw, 1.75rem);
   font-weight: 600;
-  opacity: 0.8;
   text-shadow: 2px 2px 12px color(srgb 0.08 0.08 0.07 / 0.23);
+
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 1.5rem);
+  padding-top: 150px;
 }
 
-.tit-line1 {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  text-shadow: 2px 2px 12px color(srgb 0.18 0.18 0.18 / 0.62);
+.tdhl {
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 1.5rem);
 }
 
-.tit-line2 {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  text-shadow: 2px 2px 12px color(srgb 0.18 0.18 0.18 / 0.62);
-  padding-bottom: 17.5vh;
+.tit-container .content {
+  text-shadow: 2px 2px 12px color(srgb 0.08 0.08 0.07 / 0.23);
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  width: 100vw;
 }
 
 @media screen and (max-width: 720px) {
@@ -5414,13 +5436,6 @@ p {
 }
 
 #gallery-info {
-  /* background: linear-gradient(
-      217deg,
-      #f7eeeb,
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, #f7eeeb, rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, #ffb59c, rgba(0, 0, 255, 0) 70.71%); */
   background: #CDCDC3;
   padding: 0;
   display: flex;
@@ -5434,25 +5449,26 @@ p {
   content: "";
   display: block;
   width: 100%;
-  height: 27%;
-  background: linear-gradient(0deg, rgb(205 205 195) 0, #000000);
+  height: 184px;
   position: absolute;
   top: 0;
+  background-image: url(../../storage/imgs/cover.png);
+  background-repeat: repeat-x;
+  background-position-x: center;
+  background-position-y: top;
 }
 
 #gallery-info .gallery-tit {
   font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
-  color: #f5f4eb;
   padding: 20px 0 0 0;
   margin: 2.5em 0 1em 0;
   z-index: 2;
-  text-shadow: 2px 2px 12px color(srgb 0.8 0.8 0.76);
+  font-family: loiMonCheri;
 }
 
 .card-loitph {
   min-width: 650px;
   min-height: 500px;
-  /* background: -webkit-linear-gradient(131deg, #ffe1d775 0%, #ffb094e0 99%); */
   background: #F5F4EB;
 
   border-top: 1px solid #525252;
@@ -5477,31 +5493,31 @@ p {
 }
 
 .cloitph .img {
-  background: url(../../storage/gallery/6.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/1.jpg) no-repeat center center/cover;
 }
 .cloitph1 .img {
-  background: url(../../storage/gallery/2.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/2.jpg) no-repeat center center/cover;
 }
 .cloitph2 .img {
-  background: url(../../storage/gallery/1.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/3.jpg) no-repeat center center/cover;
 }
 .cloitph3 .img {
-  background: url(../../storage/gallery/4.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/4.jpg) no-repeat center center/cover;
 }
 .cloitph4 .img {
-  background: url(../../storage/gallery/5.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/5.jpg) no-repeat center center/cover;
 }
 .cloitph5 .img {
-  background: url(../../storage/gallery/9.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/6.jpg) no-repeat center center/cover;
 }
 .cloitph6 .img {
-  background: url(../../storage/gallery/3.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/7.jpg) no-repeat center center/cover;
 }
 .cloitph7 .img {
-  background: url(../../storage/gallery/8.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/8.jpg) no-repeat center center/cover;
 }
 .cloitph8 .img {
-  background: url(../../storage/gallery/7.png) no-repeat center center/cover;
+  background: url(../../storage/gallery/9.jpg) no-repeat center center/cover;
 }
 
 #ctn_loitph {
@@ -5548,23 +5564,46 @@ p {
 #msg-container {
   height: 100vh;
   width: 100vw;
+  position: relative;
+}
 
-  border: 1px solid #525252;
+#msg-container .msg-img {
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  width: 644px;
+  height: 562px;
+  transform: translateX(-85%) translateY(-20%);
+  filter: opacity(0.5);
+
+  background: url(../../storage/imgs/flower.webp) no-repeat center center/cover;
+}
+
+#msg-container .msg-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-family: loiMonCheri;
+  font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
 }
 
 #msg-container .msg-content {
   height: 100%;
   width: 100%;
   display: flex;
+  z-index: 2;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #msg-form {
   display: flex;
   flex-direction: column;
-
   width: 500px;
-
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 720px) {
@@ -5585,13 +5624,14 @@ p {
   background: #f5f4eb;
 }
 
-#msg-container #select2 {
+#msg-container #msgSelect {
   width: 100%;
   height: 3.5rem;
   border: 1px solid #525252;
   border-bottom: unset;
   padding: 0 1.7rem;
   background: #f5f4eb;
+  border-radius: 0;
 }
 
 #msg-container .txtarea {
@@ -5620,4 +5660,8 @@ p {
   color: #f5f4eb;
   border-radius: 60rem;
   margin-top: 1.55em;
+}
+
+#msg-container .options {
+  border-radius: 0;
 }

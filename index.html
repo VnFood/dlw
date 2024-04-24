@@ -123,20 +123,8 @@
     <link rel="preload" as="image" href="./storage/imgs/ring/095.webp" />
   </head>
   <body style="overflow-x: hidden">
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-      <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-          <div class="preloader-circle"></div>
-          <div class="preloader-img pere-text">
-            <!-- <img src="assets/img/logo/logo.png" alt=""> -->
-            <img src="./storage/logo/final.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- success info -->
 
-    <!-- Preloader Start -->
     <header>
       <!-- Header Start -->
       <div id="home-page" class="header-area">
@@ -198,16 +186,11 @@
       <div
         class="slide"
       >
+        <div class="tit-top">
+          <div class="june2nd">June 2nd</div>
+          <div class="tdhl">Thuỳ Dung - Hữu Lợi</div>
+        </div>
         <div class="tit-container">
-          <div class="label">June 2nd</div>
-          <div class="tit-line1">
-            <div class="content">Thuỳ Dung</div>
-            <div class="empty"></div>
-          </div>
-          <div class="tit-line2">
-            <div class="empty"></div>
-            <div class="content">Hữu Lợi</div>
-          </div>
         </div>
       </div>
       <!-- Slider Area End-->
@@ -513,43 +496,51 @@
       <!-- Gift End -->
       <!--? Contact form Start -->
       <section id="msg-container">
+        <div class="msg-img"></div>
         <div class="msg-content">
-          <form id="msg-form" action="#" method="POST">
+          <div class="msg-title">Thông điệp</div>
+          
+          <div id="msg-form" >
             <div class="name">
               <input
+                id="msgName"
                 class="input-name"
                 type="text"
                 name="name"
                 placeholder="Họ và Tên"
+                maxlength="50"
               />
             </div>
-
+  
             <div class="options">
-              <select name="select" id="select2">
-                <option value="">1 Khách</option>
-                <option value="">2 Khách</option>
-                <option value="">3 Khách</option>
-                <option value="">4 Khách</option>
-                <option value="">5 Khách</option>
-                <option value="">6 Khách</option>
-                <option value="">7 Khách</option>
-                <option value="">8 Khách</option>
-                <option value="">9 Khách</option>
-                <option value="">10 Khách</option>
+              <select name="select" id="msgSelect">
+                <option value="1">1 Khách</option>
+                <option value="2">2 Khách</option>
+                <option value="3">3 Khách</option>
+                <option value="4">4 Khách</option>
+                <option value="5">5 Khách</option>
+                <option value="6">6 Khách</option>
+                <option value="7">7 Khách</option>
+                <option value="8">8 Khách</option>
+                <option value="9">9 Khách</option>
+                <option value="10">10 Khách</option>
               </select>
             </div>
-
+  
             <div class="msg-area">
               <textarea
+                id="msgTxtarea"
                 class="txtarea"
                 name="message"
                 placeholder="Thông điệp yêu thương"
+                maxlength="255"
               ></textarea>
             </div>
             <div class="msg-btn-submit">
-              <button class="btn-submit" type="submit">Gửi đi</button>
+              <!-- type="submit" -->
+              <button id="sendBtn" class="btn-submit" >Gửi đi</button>
             </div>
-          </form>
+          </div>
         </div>
       </section>
       <!-- Contact form End -->
@@ -587,33 +578,62 @@
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
+      
+      const userId = localStorage.getItem("userId");
+      const id = userId || crypto.randomUUID();
+      if (!userId) {
+        localStorage.setItem("userId", id);
+      }
 
       const db = getFirestore(app);
-      console.log(db);
 
+      let rawUsers = [];
       async function getUsers(db) {
         const u = collection(db, "users");
         const querySnapshot = await getDocs(u);
         querySnapshot.forEach((doc) => {
-          console.log(doc.id);
-          console.log(doc.data());
+          rawUsers.push(doc.data());
         });
         return querySnapshot;
       }
 
-      getUsers(db);
+      async function addUsers() {
+        await getUsers(db);
+        const isExist = !!rawUsers.find(user => user.id === id);
 
-      // async function addUsers(db) {
-      //   const u = collection(db, 'users');
-      //   const docRef = await addDoc(u, {
-      //     name: 'LoiTPH1',
-      //     count: 10
-      //   });
-      // }
+        const msgName = document.getElementById('msgName').value.trim().substring(0, 50);
+        const msgSelect = document.getElementById('msgSelect').value.trim();
+        const msgTxtarea = document.getElementById('msgTxtarea').value.trim().substring(0, 255);
+        if (
+          !isExist &&
+          msgName &&
+          msgName?.length <= 50 &&
+          msgSelect &&
+          msgTxtarea?.length <= 255
+        ) {
+          const u = collection(db, 'users');
+          const docRef = await addDoc(u, {
+            id: id,
+            name: msgName,
+            count: msgSelect,
+            message: msgTxtarea,
+            time: new Date().toString()
+          });
+        } else {
+          console.log('stop')
+        }
+      }
 
-      // setTimeout(() => {
-      //   addUsers(db);
-      // }, 3000)
+      let action;
+
+      document.getElementById('sendBtn').addEventListener('click', () => {
+        clearTimeout(action);
+
+        action = setTimeout(() => {
+          addUsers();
+        }, 1000);
+      });
+
     </script>
 
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
