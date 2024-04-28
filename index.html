@@ -30,6 +30,7 @@
     <link rel="preload" as="image" href="./storage/imgs/cover-slide.png" />
     <link rel="preload" as="image" href="./storage/imgs/cover.png" />
     <link rel="preload" as="image" href="./storage/imgs/flower.webp" />
+    <link rel="preload" as="image" href="./storage/imgs/map.jpg" />
 
     <link rel="preload" as="image" href="./storage/imgs/ring/000.webp" />
     <link rel="preload" as="image" href="./storage/imgs/ring/001.webp" />
@@ -466,7 +467,20 @@
     <div
       id="maps"
     >
-      maps
+      <div class="map-tit">Bản đồ</div>
+      <div
+        class="map-wrapper"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2196338891026!2d106.65598457583849!3d10.794483358858724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752934792c4181%3A0xe66860a2929b160c!2sThe%20Adora%20Legend!5e0!3m2!1sen!2s!4v1711989331137!5m2!1sen!2s"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="bg-map">
+        <img src="./storage/imgs/map.jpg" alt="">
+      </div>
     </div>
 
 
@@ -476,6 +490,9 @@
       </svg>
     </div>
 
+    <footer>
+      © 2024 LoiTPH. All rights reserved.
+    </footer>
     <!-- JS here -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";

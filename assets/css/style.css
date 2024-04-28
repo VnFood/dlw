@@ -5554,3 +5554,70 @@ p {
 
   transition: all 1s ease-in-out;
 }
+
+#maps {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.map-tit {
+  text-align: center;
+  font-family: loiMonCheri;
+  font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
+  position: relative;
+  z-index: 100;
+  margin: 8vh 0 2vh 0;
+}
+
+.map-wrapper {
+  width: 70vw;
+  height: 80vh;
+  position: relative;
+  border-radius: 5rem;
+  border: 1px solid #525252;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 10vh;
+}
+
+.map-wrapper iframe {
+  border-radius: 5rem;
+  padding: 20px;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+.bg-map {
+  position: absolute;
+  bottom: 0;
+  background: #cdcdc3;
+}
+
+.bg-map img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  width: 100vw;
+  line-height: 1;
+  font-family: 'loiBD-Black';
+  color: #525252;
+  background: #f5f4eb;
+  padding: 5px 0;
+  height: auto;
+  text-align: center;
+  border-top: 1px solid #525252;
+}
+
