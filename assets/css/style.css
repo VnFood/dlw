@@ -5180,7 +5180,7 @@ p {
   z-index: 2;
   font-family: loiMonCheri;
   text-align: center;
-  height: 20vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -5289,7 +5289,7 @@ p {
 
 #msg-info .msg-img {
   position: absolute;
-  top: 50px;
+  top: 10vh;
   left: 50vw;
   width: 681px;
   height: 599px;
@@ -5305,6 +5305,7 @@ p {
   text-align: center;
   font-family: loiMonCheri;
   font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
+  margin-top: 15vh;
 }
 
 #msg-info .msg-content {
@@ -5391,7 +5392,7 @@ p {
 }
 
 
-#our-story {
+#thankful {
   transition: opacity 0.5s ease-in-out;
   position: relative;
   padding: 0;
