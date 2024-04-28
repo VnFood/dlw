@@ -5305,7 +5305,7 @@ p {
   text-align: center;
   font-family: loiMonCheri;
   font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
-  margin-top: 15vh;
+  margin-top: 20vh;
 }
 
 #msg-info .msg-content {
@@ -5574,7 +5574,7 @@ p {
   font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
   position: relative;
   z-index: 100;
-  margin: 8vh 0 2vh 0;
+  margin: 15vh 0 2vh 0;
 }
 
 .map-wrapper {
