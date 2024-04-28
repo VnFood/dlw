@@ -25,6 +25,12 @@
     <link rel="stylesheet" href="assets/css/slick.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
+
+    <link rel="preload" as="image" href="./storage/imgs/slide-1.webp" />
+    <link rel="preload" as="image" href="./storage/imgs/cover-slide.png" />
+    <link rel="preload" as="image" href="./storage/imgs/cover.png" />
+    <link rel="preload" as="image" href="./storage/imgs/flower.webp" />
+
     <link rel="preload" as="image" href="./storage/imgs/ring/000.webp" />
     <link rel="preload" as="image" href="./storage/imgs/ring/001.webp" />
     <link rel="preload" as="image" href="./storage/imgs/ring/002.webp" />
@@ -122,7 +128,7 @@
     <link rel="preload" as="image" href="./storage/imgs/ring/094.webp" />
     <link rel="preload" as="image" href="./storage/imgs/ring/095.webp" />
   </head>
-  <body style="overflow-x: hidden">
+  <body id="loitph-body" style="overflow-x: hidden">
     <!-- success info -->
 
     <header>
@@ -196,140 +202,52 @@
       <!--? Our Story Start -->
       <div
         id="our-story"
-        style="
-          transition: opacity 0.5s ease-in-out;
-          background: black;
-          position: relative;
-          height: 2000px;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        "
-        class="Our-story-area story-padding"
       >
-        <div style="position: absolute">
-          <canvas id="cnv" style="width: 100vw; height: 2000px"></canvas>
-        </div>
         <div
-          class="container"
-          style="
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-          "
+          class="ring-wrapper"
         >
-          <div
-            style="
-              display: flex;
-              flex-flow: column;
-              justify-content: center;
-              z-index: 100;
-              padding-top: 5rem;
-            "
-          >
-          <div
-            class="thanks"
-            style="
-              display: flex;
-              flex-flow: column;
-              justify-content: flex-end;
-              align-items: flex-end;
-              width: 100vw;
-              min-width: 320px;
-            "
-          >
-            <div
-              class="tks-title"
-              style="
-                font-family: 'loiHelvFont';
-                font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
-                text-align: center;
-                width: 100%;
-                min-width: 320px;
-                text-shadow: 2px 2px 12px color(srgb 0.65 0.62 0.58 / 0.88);
-              "
-            >
-              Xin cảm ơn
-            </div>
-            <div
-              class="tks-content"
-              style="
-                text-align: center;
-                font-size: clamp(0.95rem, -0.875rem + 8.333333vw, 0.95rem);
-                font-weight: 300;
-                width: 100vw;
-                min-width: 320px;
-              "
-            >
-              <br />
-              <!-- Quý khách đã chung vui cùng gia đình ạ! -->
-              Sâu sắc đến bậc sinh thành của chúng con!
-            </div>
-          </div>
-            <div
-              style="
-                position: relative;
-                height: 5px;
-                width: 75%;
-                min-width: 320px;
-                margin: auto;
-              "
-            >
-              <img
-                id="ring"
-                src="./storage/imgs/ring/000.webp"
-                alt=""
-                srcset=""
-                style="animation: fadeIn 9s"
-              />
-            </div>
-            
-          </div>
-        </div>
-        <div
-          id="wedding-info"
-        >
-          <div class="info-card">
-            <div class="gradient-content">
-              <p class="tit">Trân trọng kính mời</p>
-              <p class="dash"></p>
-              <p class="sep">Quý Khách dự tiệc chung vui </br>cùng gia đình chúng tôi tại</p>
-              
-              </br>
-              <p>Nhà hàng tiệc cưới</p>
-              <p class="adora">Adora Legend</p>
-              <p>32 Hoàng Việt, Phường 4, Tân Bình, TP.HCM</p>
-              <!-- thêm nút dẫn đường mở map -->
-              </br>
-              
-              <p class="date-time">12 giờ 30 Chủ Nhật</p>
-              <p class="date-time">Ngày 2 tháng 6 năm 2024</p>
-              </br>
-              
-              <p>Sự hiện diện của Quý Khách</p>
-              <p>là niềm vinh hạnh cho gia đình chúng tôi</p>
-
-              <!-- Bỏ br -->
-              </br><br><br> 
-              <p>Trân trọng kính mời!</p>
-              <p>Đón khách: <b style="color: white;">11h00 - Khai tiệc: 12h30</b></p>
-            </div>
-          
-            <div class="gradient-bg">
-              <div class="gradients-container">
-                <div class="g1"></div>
-                <div class="g2"></div>
-                <div class="g3"></div>
-                <div class="g4"></div>
-                <div class="g5"></div>
-              </div>
-            </div>
+          <div class="ring-animate">
+            <img
+              id="ring"
+              src="./storage/imgs/ring/000.webp"
+              alt=""
+              srcset=""
+              style="animation: fadeIn 9s"
+            />
           </div>
 
+          <div class="tks-container">
+            <div class="tks-tit">Xin cảm ơn</div>
+            <div class="tks-content">Sâu sắc đến bậc sinh thành của chúng con!</div>
+          </div>
         </div>
+
+
+        <div class="star-wrapper">
+          <canvas id="cnv" style="width: 100vw; height: 3000px"></canvas>
+        </div>
+        
       </div>
+
+      <div
+        id="wedding-info"
+      >
+        <div class="info-card">
+          <div class="gradient-content">
+            <p class="tit">Trân trọng kính mời</p>
+            <p class="tit">Quý Khách dự tiệc chung vui cùng gia đình chúng tôi tại</p>
+            <p class="adora">Adora Legend</p>
+            <p class="date-time">32 Hoàng Việt, Phường 4, Tân Bình, TP.HCM</p>
+            <p class="date-time">12h30 Chủ Nhật | 02/06/2024</p>
+            <a id="checkmap" href="#maps">Xem địa chỉ</a>
+          </div>
+          <div class="gradient-bg">
+          </div>
+        </div>
+
+      </div>
+
+
       <!--? Gallery Area Start -->
       <section
         id="gallery-info"
@@ -340,7 +258,7 @@
         >
           Thư viện ảnh
         </div>
-        <div style="width: 100%; height: 750px;">
+        <div style="width: 100%;height: 80vh;">
           <div
             id="ctn_loitph"
           >
@@ -545,11 +463,18 @@
       <!-- Contact form End -->
 
     </main>
-    <footer>
-      <!-- Footer Start-->
-      
-      <!-- Footer End-->
-    </footer>
+    <div
+      id="maps"
+    >
+      maps
+    </div>
+
+
+    <div id="cover-page">
+      <svg id="spinner" viewBox="0 0 50 50">
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" stroke="#CDCDC3"></circle>
+      </svg>
+    </div>
 
     <!-- JS here -->
     <script type="module">
@@ -563,6 +488,41 @@
         getDocs,
         addDoc,
       } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+      function uuidv4() {
+        return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+          (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+        );
+      }
+
+      function starSpinner() {
+        const myBody = document.getElementById('loitph-body');
+        myBody.style.overflow = 'hidden';
+
+        window.location.href = "#";
+
+        const coverPage = document.getElementById('cover-page');
+        coverPage.style.display = 'flex';
+        coverPage.style.height = '100vh';
+      }
+
+      function stopSpinner() {
+        // clear state
+        document.getElementById('msgName').value = '';
+        document.getElementById('msgSelect').value = '1';
+        document.getElementById('msgTxtarea').value = '';
+
+        const myBody = document.getElementById('loitph-body');
+        myBody.style.overflowX = 'hidden';
+        myBody.style.overflowY = 'auto';
+
+        const coverPage = document.getElementById('cover-page');
+        
+        coverPage.style.height = '0vh';
+        setTimeout(() => {
+          coverPage.style.display = 'none';
+        }, 900);
+      }
 
       const firebaseConfig = {
         apiKey: "AIzaSyDcIWlzGGHjbuHWbu25JzTGhSz-yJjAezY",
@@ -579,7 +539,7 @@
       const app = initializeApp(firebaseConfig);
       
       const userId = localStorage.getItem("userId");
-      const id = userId || crypto.randomUUID();
+      const id = userId || uuidv4();
       if (!userId) {
         localStorage.setItem("userId", id);
       }
@@ -603,6 +563,7 @@
         const msgName = document.getElementById('msgName').value.trim().substring(0, 50);
         const msgSelect = document.getElementById('msgSelect').value.trim();
         const msgTxtarea = document.getElementById('msgTxtarea').value.trim().substring(0, 255);
+
         if (
           !isExist &&
           msgName &&
@@ -618,14 +579,28 @@
             message: msgTxtarea,
             time: new Date().toString()
           });
+
+          
+
+          
+          console.log('done');
+
+          // stop spinner
+          stopSpinner();
         } else {
-          console.log('stop')
+          console.log('stop');
+
+          // stop spinner
+          stopSpinner();
         }
       }
 
       let action;
 
       document.getElementById('sendBtn').addEventListener('click', () => {
+        // start spinner
+        starSpinner();
+
         clearTimeout(action);
 
         action = setTimeout(() => {
@@ -646,8 +621,6 @@
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/slick.min.js"></script>
-    <!-- Date Picker -->
-    <!-- <script src="./assets/js/gijgo.min.js"></script> -->
     <!-- One Page, Animated-HeadLin -->
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/animated.headline.js"></script>

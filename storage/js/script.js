@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $("#home, #about, #wedding, #gallery, #message").on('click', function(event) {
+  $("#home, #about, #wedding, #gallery, #message, #checkmap").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -60,9 +60,9 @@ var H = 2000;
 
 //Set Canvas and Background Color;
 cnv.width = W;
-cnv.height = 2000;
+cnv.height = 3000;
 ctx.fillStyle = "#000";
-ctx.fillRect(0, 0, W, 2000);
+ctx.fillRect(0, 0, W, 3000);
 
 //Glow effect;
 ctx.shadowBlur = 10;

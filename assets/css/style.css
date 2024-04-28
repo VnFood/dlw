@@ -13,31 +13,22 @@
 }
 
 @font-face {
-  font-family: loiWukanRegular;
-  src: url(../../storage/font/Wulkan-Display-Regular.otf);
+  font-family: loiMonCheri;
+  src: url(../../storage/font/mon-cheri.ttf);
 }
 
 @font-face {
-  font-family: loiWukanLightItalic;
-  src: url(../../storage/font/Wulkan-Display-Light-Italic.otf);
-}
-@font-face {
-  font-family: loiWukanLight;
-  src: url(../../storage/font/Wulkan-Display-Light.otf);
-}
-
-@font-face {
-  font-family: loiWukanBoldItalic;
-  src: url(../../storage/font/Wulkan-Display-Bold-Italic.otf);
-}
-@font-face {
-  font-family: loiWukanBold;
+  font-family: loiWulkanBold;
   src: url(../../storage/font/Wulkan-Display-Bold.otf);
 }
 
 @font-face {
-  font-family: loiMonCheri;
-  src: url(../../storage/font/mon-cheri.ttf);
+  font-family: loiBD-Black;
+  src: url(../../storage/font/BeautiqueDisplay-Black.otf);
+}
+@font-face {
+  font-family: loiBD-Light;
+  src: url(../../storage/font/BeautiqueDisplay-Light.otf);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Playfair+Display:400,500,600,700,800,900|Roboto:300,400,500,700&display=swap");
@@ -154,6 +145,7 @@ body {
   background: #CDCDC3;
   position: relative;
 }
+
 h1,
 h2,
 h3,
@@ -1756,34 +1748,7 @@ hr {
     padding-bottom: 70px;
   }
 }
-.story-padding {
-  padding-top: 80px;
-  padding-bottom: 150px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .story-padding {
-    padding-top: 80px;
-    padding-bottom: 150px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .story-padding {
-    padding-top: 80px;
-    padding-bottom: 100px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .story-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
-@media (max-width: 575px) {
-  .story-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
+
 .gift-padding {
   padding-top: 120px;
   padding-bottom: 130px;
@@ -2083,7 +2048,7 @@ hr {
   text-transform: uppercase;
   display: block;
   font-size: 16px;
-  font-family: "Barlow", sans-serif;
+  font-family: loiHelvFont;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -2470,82 +2435,7 @@ hr {
 .header2 {
   background: #fbf7f3;
 }
-.Our-story-area {
-  position: relative;
-}
-.Our-story-area .story-img img {
-  width: 100%;
-}
-.Our-story-area .story-img .story2 {
-  position: relative;
-  bottom: -51px;
-  left: -30px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .Our-story-area .story-img .story2 {
-    bottom: 0px;
-    left: 0px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .Our-story-area .story-img .story2 {
-    bottom: 0px;
-    left: 0px;
-  }
-}
-@media (max-width: 575px) {
-  .Our-story-area .story-img .story2 {
-    bottom: 0px;
-    left: 0px;
-  }
-}
-.Our-story-area .story-caption {
-  display: flex;
-  align-items: center;
-}
-.Our-story-area .story-caption .story-details {
-  padding-left: 150px;
-  padding-right: 24px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .Our-story-area .story-caption .story-details {
-    padding-left: 121px;
-    padding-right: 24px;
-  }
-}
-@media (max-width: 575px) {
-  .Our-story-area .story-caption .story-details {
-    padding-left: 94px;
-    padding-right: 5px;
-  }
-}
-.Our-story-area .story-caption .story-details h4 {
-  font-size: 30px;
-  font-weight: 400;
-  color: var(--ast-global-color-2);
-  text-transform: capitalize;
-  margin-bottom: 21px;
-}
-.Our-story-area .story-caption .story-details p {
-  color: var(--ast-global-color-2);
-}
-@media (max-width: 575px) {
-  .Our-story-area .story-caption .story-details p {
-    font-size: 15px;
-  }
-}
-.Our-story-area .story-caption.background-img {
-  width: 474px;
-  height: 583px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media (max-width: 575px) {
-  .Our-story-area .story-caption.background-img {
-    width: 291px;
-    height: 395px;
-  }
-}
+
 .pricing-card-area .single-card {
   background: #fff;
   padding: 70px 25px;
@@ -5072,26 +4962,23 @@ p {
 }
 
 #ring {
-  display: block;
   width: 75%;
   height: auto;
   min-width: 320px;
   animation-name: ringloop;
   animation-duration: 50ms;
   animation-iteration-count: infinite;
-  margin: auto;
-  margin-top: -5rem;
 }
 
 .tks-content {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   #ring {
     margin-top: 100px;
   }
-}
+} */
 
 @font-face {
   font-family: slideTitle;
@@ -5101,7 +4988,7 @@ p {
 .slide {
   background-image: url(../../storage/imgs/slide-1.webp);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center center;
   background-size: cover;
 
   font-family: loiMonCheri;
@@ -5136,7 +5023,7 @@ p {
   height: 184px;
   position: absolute;
   left: 0;
-  background-image: url(../../storage/imgs/cover.png);
+  background-image: url(../../storage/imgs/cover-slide.png);
   background-repeat: repeat-x;
   background-position-x: center;
   background-position-y: top;
@@ -5176,114 +5063,6 @@ p {
   .tit-container {
     width: 100%;
   }
-}
-
-#wedding-info {
-  z-index: 100;
-  padding: 150px;
-  position: relative;
-
-  padding-left: 0;
-  padding-right: 0;
-}
-
-#wedding-info::before {
-  content: "";
-  width: 600px;
-  height: 800px;
-  border-radius: 60rem 60rem 0 0;
-  box-shadow: inset 0 0 0 0.1rem rgb(255 194 205 / 51%);
-  opacity: 0.4;
-  position: absolute;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-  top: 100px;
-}
-
-/* @keyframes loigradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
-
-#wedding-info .info-card {
-  padding: 50px;
-  padding-top: 80px;
-  height: 700px;
-  width: 500px;
-  margin: auto;
-  border-radius: 60rem 60rem 0 0;
-  text-align: center;
-  
-  /* background: linear-gradient(217deg, #cf803dab, rgb(210 145 110 / 72%), rgb(98 68 50 / 13%), rgb(232 133 48 / 85%)); */
-  background: none;
-  position: relative;
-
-  background-size: 400% 400%;
-  animation: loigradient 15s ease infinite;
-}
-
-#wedding-info .info-card p {
-  color: whitesmoke;
-  font-size: clamp(0.95rem, -0.875rem + 8.333333vw, 1rem);
-  margin: 0;
-}
-
-#wedding-info .info-card .dash {
-  border: 0.1rem dashed #ffffff47;
-  border-bottom: unset;
-  border-left: unset;
-  border-right: unset;
-  width: 65%;
-  margin: auto;
-}
-
-#wedding-info .info-card .adora {
-  font-family: 'loiWukanBold';
-  font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 3.5rem);
-  margin: 15px 0px;
-}
-
-@media screen and (max-width: 720px) {
-  #wedding-info::before {
-    width: 100%;
-    height: 85%;
-  }
-
-  #wedding-info .info-card {
-    width: 85%;
-    height: 100%;
-  }
-
-  #wedding-info::before {
-    height: 80%;
-  }
-}
-
-#wedding-info .info-card .tit {
-  font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 1.5rem);
-  font-weight: lighter;
-  margin-bottom: 27px;
-}
-
-#wedding-info .info-card .sep {
-  margin-top: 27px;
-}
-
-#wedding-info .info-card .date-time {
-  font-style: italic;
-  font-size: clamp(1.15rem, -0.875rem + 8.333333vw, 1.15rem);
-}
-
-#wedding-info .gradient-content {
-  position: relative;
-  z-index: 100;
 }
 
 :root {
@@ -5335,105 +5114,41 @@ p {
 }
 
 .gradient-bg {
-  overflow: hidden;
-  background: linear-gradient(40deg, rgb(255 161 98 / 94%), rgb(255 146 182 / 95%));
-  top: 0;
-  left: 0;
-
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 480px;
+  height: 650px;
   border-radius: 60rem 60rem 0 0;
+
+  background: linear-gradient(40deg, #f8a064, #f491b5);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
 }
 
-.gradient-bg svg {
-  display: none;
-}
-
-.gradient-bg .gradients-container {
-  filter: blur(40px) ;
-  width: 100%;
-  height: 100%;
-}
-
-.gradient-bg .g1 {
+.gradient-bg::before {
+  content: "";
+  width: 580px;
+  height: 750px;
+  border-radius: 60rem 60rem 0 0;
+  box-shadow: inset 0 0 0 0.1rem rgb(255 194 205 / 51%);
+  opacity: 0.4;
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-
-  transform-origin: center center;
-  animation: moveVertical 10s ease infinite;
-
-  opacity: 1;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  top: -56px;
 }
 
-.gradient-bg .g2 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
+@media screen and (max-width: 720px) {
+  .gradient-bg {
+    width: 70vw;
+    height: clamp(35rem, -0.875rem + 8.333333vw, 35rem);
+  }
 
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-
-  transform-origin: calc(50% - 400px);
-  animation: moveInCircle 10s reverse infinite;
-
-  opacity: 1;
-}
-
-.gradient-bg .g3 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2 + 200px);
-  left: calc(50% - var(--circle-size) / 2 - 500px);
-
-  transform-origin: calc(50% + 400px);
-  animation: moveInCircle 10s linear infinite;
-
-  opacity: 1;
-}
-
-.gradient-bg .g4 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: var(--circle-size);
-  height: var(--circle-size);
-  top: calc(50% - var(--circle-size) / 2);
-  left: calc(50% - var(--circle-size) / 2);
-
-  transform-origin: calc(50% - 200px);
-  animation: moveHorizontal 10s ease infinite;
-
-  opacity: 0.7;
-}
-
-.gradient-bg .g5 {
-  position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-  mix-blend-mode: var(--blending);
-
-  width: calc(var(--circle-size) * 2);
-  height: calc(var(--circle-size) * 2);
-  top: calc(50% - var(--circle-size));
-  left: calc(50% - var(--circle-size));
-
-  transform-origin: calc(50% - 800px) calc(50% + 200px);
-  animation: moveInCircle 10s ease infinite;
-
-  opacity: 1;
+  .gradient-bg::before {
+    width: 85vw;
+    height: clamp(40rem, -0.875rem + 8.333333vw, 40rem);
+    top: -43px;
+  }
 }
 
 #gallery-info {
@@ -5444,6 +5159,7 @@ p {
   align-items: center;
   flex-direction: column;
   position: relative;
+  height: 100vh;
 }
 
 #gallery-info::before {
@@ -5460,29 +5176,29 @@ p {
 }
 
 #gallery-info .gallery-tit {
-  font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
-  padding: 20px 0 0 0;
-  margin: 2.5em 0 1em 0;
+  font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
   z-index: 2;
   font-family: loiMonCheri;
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .card-loitph {
-  min-width: 650px;
-  min-height: 500px;
   background: #F5F4EB;
-
   border-top: 1px solid #525252;
   border-bottom: 1px solid #525252;
   border-right: 1px solid #525252;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   padding: 1.5em;
-
+  height: 60vh;
+  min-width: 80vh;
 }
+
 .card-loitph:first-child {
   border-left: 1px solid #525252;
 }
@@ -5523,12 +5239,14 @@ p {
 
 #ctn_loitph {
   width: 80vw;
+  height: 70vh;
   margin: auto;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0;
+  align-items: flex-end;
 }
 
 #ctn_loitph::-webkit-scrollbar {
@@ -5566,14 +5284,15 @@ p {
   height: 100vh;
   width: 100vw;
   position: relative;
+  background: #CDCDC3;
 }
 
 #msg-container .msg-img {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 50vw;
-  width: 644px;
-  height: 562px;
+  width: 681px;
+  height: 599px;
   transform: translateX(-85%) translateY(-20%);
   filter: opacity(0.5);
 
@@ -5585,7 +5304,7 @@ p {
   z-index: 2;
   text-align: center;
   font-family: loiMonCheri;
-  font-size: clamp(3.5rem, -0.875rem + 8.333333vw, 5.5rem);
+  font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
 }
 
 #msg-container .msg-content {
@@ -5623,6 +5342,7 @@ p {
   border-bottom: unset;
   padding: 0 2rem;
   background: #f5f4eb;
+  font-family: loiHelvFont;
 }
 
 #msg-container #msgSelect {
@@ -5633,6 +5353,7 @@ p {
   padding: 0 1.7rem;
   background: #f5f4eb;
   border-radius: 0;
+  font-family: loiHelvFont;
 }
 
 #msg-container .txtarea {
@@ -5645,6 +5366,7 @@ p {
   border-image: initial;
   padding: 0.85rem 2rem;
   background: #f5f4eb;
+  font-family: loiHelvFont;
 }
 
 #msg-container .msg-btn-submit {
@@ -5661,8 +5383,174 @@ p {
   color: #f5f4eb;
   border-radius: 60rem;
   margin-top: 1.55em;
+  font-family: loiHelvFont;
 }
 
 #msg-container .options {
   border-radius: 0;
+}
+
+
+#our-story {
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#wedding-info {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ring-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 100;
+  height: 100vh;
+}
+
+.ring-animate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tks-container {
+  font-size: clamp(2.5rem, -0.875rem + 8.333333vw, 3.5rem);
+  text-align: center;
+  color: white;
+  width: 100vw;
+  position: absolute;
+}
+
+.tks-tit {
+  font-family: loiMonCheri;
+  /* font-size: clamp(25rem, -0.875rem + 8.333333vh, 25rem); */
+}
+
+.tks-content {
+  font-family: loiHelvFont;
+  font-size: 16px;
+}
+
+.star-wrapper {
+  position: absolute;
+}
+
+.info-card {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.gradient-content {
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.gradient-content p {
+  color: whitesmoke;
+  margin: 0;
+  font-family: loiHelvFont;
+  line-height: 1;
+}
+
+.gradient-content .tit {
+  font-size: clamp(1.25rem, -0.875rem + 8.333333vw, 1.95rem);
+  font-family: loiBD-Light;
+  max-width: 675px;
+}
+
+.gradient-content .adora {
+  font-family: loiWulkanBold;
+  font-size: clamp(2.75rem, -0.875rem + 8.333333vw, 4.5rem);
+  padding: 20px 0;
+}
+
+.gradient-content .date-time {
+  font-family: loiBD-Black;
+  padding-top: 5px;
+}
+
+#checkmap {
+  display: flex;
+  height: 50px;
+  border-radius: 60rem;
+  background: #e07348;
+  color: white;
+  width: 131px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin-top: 5vh;
+  font-family: loiHelvFont;
+}
+
+
+#spinner {
+  animation: spin-rotate 2s linear infinite;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+}
+
+#spinner .path {
+  stroke: hsl(210, 70, 75);
+  stroke-linecap: round;
+  animation: spin-dash 1.5s ease-in-out infinite;
+}
+
+@keyframes spin-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+#cover-page {
+  display: none;
+  height: 0vh;
+
+  width: 100vw;
+  background-image: linear-gradient(-105deg, #f5f4eb, #cdcdc3);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+
+  transition: all 1s ease-in-out;
 }
