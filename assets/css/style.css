@@ -5350,7 +5350,7 @@ p {
   height: 3.5rem;
   border: 1px solid #525252;
   border-bottom: unset;
-  padding: 0 1.7rem;
+  text-indent: 1.7rem;
   background: #f5f4eb;
   border-radius: 0;
   font-family: loiHelvFont;
