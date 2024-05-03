@@ -110,3 +110,35 @@ function toRight() {
   }, 800);
 
 }
+
+window.oncontextmenu = function () {
+  return false;
+};
+
+document.addEventListener("keydown", function(event){
+  console.log(event)
+
+  var key = event.key || event.which || event.keyCode;
+
+  if (key === 'F12') {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+  }
+
+  if (event.ctrlKey || event.shiftKey) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+  }
+
+  if (key == 123) {
+    event.preventDefault();
+    event.stopPropagation();
+      return false;
+  } else if ((event.ctrlKey && event.shiftKey && key == 73) || (event.ctrlKey && event.shiftKey && key == 74)) {
+    event.preventDefault();
+    event.stopPropagation();
+      return false;
+  }
+}, false);
