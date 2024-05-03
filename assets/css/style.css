@@ -5915,6 +5915,17 @@ text {
   top: 0;
 
   transition: all 1s ease-in-out;
+
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+#cover-page p {
+  width: 100vw;
+  font-family: 'loiBD-Black';
+  font-size: clamp(1.5rem, -0.875rem + 8.333333vw, 1.5rem);
+  text-align: center;
 }
 
 #maps {

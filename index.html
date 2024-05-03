@@ -466,6 +466,8 @@
       <svg id="spinner" viewBox="0 0 50 50">
         <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" stroke="#CDCDC3"></circle>
       </svg>
+
+      <p id="cover-msg">Sending ...</p>
     </div>
 
     <footer>
@@ -512,11 +514,21 @@
         myBody.style.overflowY = 'auto';
 
         const coverPage = document.getElementById('cover-page');
+
+        const coverMsg = document.getElementById('cover-msg');
+        coverMsg.innerHTML = 'Success!'
+
+        const spinner = document.getElementById('spinner');
+        spinner.style.visibility = 'hidden';
         
-        coverPage.style.height = '0vh';
+        
+        setTimeout(() => {
+          coverPage.style.height = '0vh';
+        }, 900);
+        
         setTimeout(() => {
           coverPage.style.display = 'none';
-        }, 900);
+        }, 1500);
       }
 
       const firebaseConfig = {

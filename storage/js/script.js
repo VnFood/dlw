@@ -115,9 +115,12 @@ window.oncontextmenu = function () {
   return false;
 };
 
-document.addEventListener("keydown", function(event){
-  console.log(event)
+var ctrl = false;
+var shift = false;
+var keyU = false;
+var keyI = false;
 
+document.addEventListener("keydown", function(event){
   var key = event.key || event.which || event.keyCode;
 
   if (key === 'F12') {
@@ -126,7 +129,18 @@ document.addEventListener("keydown", function(event){
     return false;
   }
 
-  if (event.ctrlKey || event.shiftKey) {
+  ctrl = event.ctrlKey;
+  shift = event.shiftKey;
+  keyU = event.key.toLowerCase() === 'u';
+  keyI = event.key.toLowerCase() === 'i';
+  
+  if (ctrl && shift && keyI) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+  }
+
+  if (ctrl && keyU) {
     event.preventDefault();
     event.stopPropagation();
     return false;
@@ -142,3 +156,10 @@ document.addEventListener("keydown", function(event){
       return false;
   }
 }, false);
+
+document.addEventListener('keyup', (event) => {
+  ctrl = false;
+  shift = false;
+  keyU = false;
+  keyI = false;
+})
