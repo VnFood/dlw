@@ -5652,12 +5652,12 @@ text {
   position: absolute;
   top: 10vh;
   left: 50vw;
-  width: 681px;
-  height: 599px;
+  min-width: 681px;
+  min-height: 599px;
   transform: translateX(-85%) translateY(-20%);
   filter: opacity(0.5);
-
-  background: url(../../storage/imgs/flower.webp) no-repeat center center/cover;
+  background: url(../../storage/imgs/flower.webp) no-repeat center center / cover;
+  z-index: 1;
 }
 
 #msg-info .msg-title {
